@@ -2,8 +2,7 @@ const chatBox = document.getElementById("chatBox");
 const userInput = document.getElementById("userInput");
 const sendBtn = document.getElementById("sendBtn");
 
-// Your API Key
-const API_KEY = "AIzaSyAaIGhYDXOA86l3LdYxLMNJoNGah1mjeDY";
+
 
 // Pet Specialist Prompt
 const specialistPrompt = `

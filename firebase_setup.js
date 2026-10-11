@@ -16,14 +16,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-storage.js";
 
 // Your real config
-const firebaseConfig = {
-    apiKey: "AIzaSyBTobbi0JhusMib54iIm8fnVxDd65L3SnQ",
-    authDomain: "your-pet-companion.firebaseapp.com",
-    projectId: "your-pet-companion",
-    storageBucket: "your-pet-companion.appspot.com",
-    messagingSenderId: "590584534262",
-    appId: "1:590584534262:web:cdc8dd5dbaf938ef2a48d7",
-};
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

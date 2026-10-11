@@ -1,0 +1,16 @@
+# Local environment variables and API credentials
+.env
+.env.*
+!.env.example
+secrets/
+api_keys.*// Your API Key
+const API_KEY = "AIzaSyAaIGhYDXOA86l3LdYxLMNJoNGah1mjeDY";
+api-keys.*const url = `https://www.google.com/maps/embed/v1/search?key=AIzaSyAvCOlIvcsc6Y9ZHwVkrFQjfPtSyAF45jA&q=veterinary+clinics&center=${lat},${lng}&zoom=14`;
+const firebaseConfig = {
+    apiKey: "AIzaSyBTobbi0JhusMib54iIm8fnVxDd65L3SnQ",
+    authDomain: "your-pet-companion.firebaseapp.com",
+    projectId: "your-pet-companion",
+    storageBucket: "your-pet-companion.appspot.com",
+    messagingSenderId: "590584534262",
+    appId: "1:590584534262:web:cdc8dd5dbaf938ef2a48d7",
+};

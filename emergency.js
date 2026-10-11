@@ -1,7 +1,7 @@
 // Auto load map with current location
 function loadVetMap(lat, lng) {
     const map = document.getElementById("vetMap");
-    const url = `https://www.google.com/maps/embed/v1/search?key=AIzaSyAvCOlIvcsc6Y9ZHwVkrFQjfPtSyAF45jA&q=veterinary+clinics&center=${lat},${lng}&zoom=14`;
+    
 
     map.src = url;
 }
