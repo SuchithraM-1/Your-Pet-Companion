@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Guide – Pet Companion</title>
+    <link rel="stylesheet" href="food_guide.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <button class="back-btn" onclick="history.back()">← Back</button>
+        <h2 class="header-title">Food Guide 🍗</h2>
+    </header>
+
+    <div class="page">
+
+        <!-- INTRO -->
+        <section class="section">
+            <h1>Healthy Diet for Dogs & Cats</h1>
+            <p>Proper nutrition ensures long life, strong immunity, healthy coat, and overall well-being. 
+               Here is your complete food guide.</p>
+        </section>
+
+        <!-- GENERAL TIPS -->
+        <section class="card">
+            <h2>General Diet Tips</h2>
+            <ul>
+                <li>Fresh water must always be available</li>
+                <li>Avoid spices, oils, and processed foods</li>
+                <li>Introduce new foods slowly</li>
+                <li>Feed at consistent times</li>
+            </ul>
+        </section>
+
+        <!-- DOG DIET -->
+        <section class="card">
+            <h2>Dog Diet</h2>
+
+            <h3>Puppies</h3>
+            <ul>
+                <li>3–4 meals/day</li>
+                <li>High protein kibble</li>
+                <li>Chicken rice, eggs, curd rice</li>
+            </ul>
+
+            <h3>Adult Dogs</h3>
+            <ul>
+                <li>2 meals/day</li>
+                <li>Balanced carbs + meat + veggies</li>
+            </ul>
+
+            <h3>Senior Dogs</h3>
+            <ul>
+                <li>Low-fat meals</li>
+                <li>Joint supplements recommended</li>
+            </ul>
+        </section>
+
+        <!-- CAT DIET -->
+        <section class="card">
+            <h2>Cat Diet</h2>
+
+            <h3>Kittens</h3>
+            <ul>
+                <li>3–4 small meals/day</li>
+                <li>High animal-protein diet</li>
+            </ul>
+
+            <h3>Adult Cats</h3>
+            <ul>
+                <li>Wet food preferred</li>
+                <li>Avoid milk (digestive issues)</li>
+            </ul>
+
+            <h3>Foods to Avoid</h3>
+            <ul>
+                <li>Chocolate</li>
+                <li>Onions</li>
+                <li>Garlic</li>
+                <li>Grapes</li>
+            </ul>
+        </section>
+
+        <!-- DAILY PLAN -->
+        <section class="card">
+            <h2>Daily Meal Plan</h2>
+            <p><b>Morning:</b> Kibble or chicken rice</p>
+            <p><b>Evening:</b> Egg, fish meal, or meat bowl</p>
+        </section>
+
+        <!-- SUGGESTION BOX -->
+        <section class="suggest-box">
+            <h2>Have a suggestion? 📝</h2>
+            <p class="suggest-sub">Help us improve Pet Companion by sharing your ideas.</p>
+
+            <textarea id="suggestInput" placeholder="Type your suggestion here..."></textarea>
+
+            <button class="suggest-btn" onclick="submitSuggestion()">Submit</button>
+
+            <p id="suggestMessage" class="suggest-message"></p>
+        </section>
+
+    </div>
+
+    <script type="module" src="suggestions.js"></script>
+</body>
+</html>

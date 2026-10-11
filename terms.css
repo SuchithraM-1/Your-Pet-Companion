@@ -1,0 +1,11 @@
+div {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 35px;
+    color: #242020;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 12px;
+    border-radius: 50px;
+
+    background: linear-gradient(135deg, #ee86696c 0%, #71cfdbad 100%);
+}

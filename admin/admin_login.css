@@ -1,0 +1,60 @@
+* {
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    background: #f8f9fc;
+}
+
+.admin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.admin-box {
+    width: 350px;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.admin-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f49d49;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    border-radius: 6px;
+}
+
+.btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background: #4f7cac;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.note {
+    font-size: 13px;
+    margin-top: 12px;
+    color: #777;
+    text-align: center;
+}

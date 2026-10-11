@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Pet Companion – Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+
+  <!-- TOP NAVBAR (fixed) -->
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <div class="nav-left">
+        <img src="images/logo.jpg.png" alt="Pet Companion" class="nav-logo" />
+        <div>
+          <div class="nav-brand">Pet Companion</div>
+          <div class="nav-tagline">Smart care for your favourite hooman’s pet 🐾</div>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <button id="notificationBtn" class="icon-btn" title="Notifications">🔔</button>
+        <button id="settingsBtn" class="icon-btn" title="Settings">⚙️</button>
+
+        <div class="dropdown">
+          <button class="pill-btn" id="petMenuBtn">🐾 Pets ▾</button>
+          <div class="dropdown-menu" id="petDropdown">
+            <!-- filled by JS -->
+          </div>
+        </div>
+
+        <button id="logoutBtn" class="pill-btn pill-btn--danger">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <img src="images/loginpic2.jpg" alt="Dog and cat" class="hero-bg" />
+
+      <div class="container hero-content">
+        <div class="hero-text reveal">
+          <p class="hero-kicker">SINCE 2025 · TRUSTED BY PET PARENTS</p>
+          <h1>Smart Pet Care,<br /><span>One Companion at a Time.</span></h1>
+          <p class="hero-sub">
+            Track food, grooming, weight, vaccines, behaviour & more – all in a single, friendly dashboard.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#petOverview" class="btn btn-primary">View Your Pet</a>
+            <a href="#careFeatures" class="btn btn-ghost">Explore Features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- YOUR PET SECTION -->
+    <section id="petOverview" class="section section-pet">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Your Pet Overview</h2>
+          <p>Quick glance at your current pet’s profile from your Pet Companion account.</p>
+        </header>
+
+        <div class="pet-card reveal">
+          <div class="pet-main">
+            <div class="pet-avatar">🐶</div>
+            <div class="pet-info">
+              <div id="petName" class="pet-name">Loading...</div>
+              <div id="petMeta" class="pet-meta">Please wait while we fetch your pet details.</div>
+            </div>
+          </div>
+          <div class="pet-actions">
+            <a href="pet_details.html" class="pet-link">Manage pet details →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARE FEATURES GRID -->
+    <section id="careFeatures" class="section section-features">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Care Features for Every Part of Their Life</h2>
+          <p>From healthy meals to emergency help – everything your pet needs, organised in one place.</p>
+        </header>
+
+        <div class="feature-grid">
+          <!-- Food Guide -->
+          <a href="food_guide.html" class="feature-card reveal">
+            <div class="feature-icon">🍖</div>
+            <h3>Food Guide</h3>
+            <p>Balanced diet tips, portion suggestions & feeding schedules tailored to dogs and cats.</p>
+            <span class="feature-link">Open food guide →</span>
+          </a>
+
+          <!-- Grooming -->
+          <a href="grooming.html" class="feature-card reveal">
+            <div class="feature-icon">🧴</div>
+            <h3>Grooming & Hygiene</h3>
+            <p>Bath, coat care, nail trimming & ear cleaning reminders to keep them fresh.</p>
+            <span class="feature-link">Open grooming tips →</span>
+          </a>
+
+          <!-- Behaviour -->
+          <a href="behaviour.html" class="feature-card reveal">
+            <div class="feature-icon">🐾</div>
+            <h3>Behaviour Notes</h3>
+            <p>Log mood, habits & training progress to understand your pet’s behaviour patterns.</p>
+            <span class="feature-link">Open behaviour notes →</span>
+          </a>
+
+          <!-- Weight Tracker -->
+          <a href="weight_tracker.html" class="feature-card reveal">
+            <div class="feature-icon">⚖️</div>
+            <h3>Weight Tracker</h3>
+            <p>Monitor growth, track body condition & get alerts if weight goes off range.</p>
+            <span class="feature-link">Open weight tracker →</span>
+          </a>
+
+          <!-- Emergency -->
+          <a href="emergency.html" class="feature-card reveal">
+            <div class="feature-icon">🚑</div>
+            <h3>Emergency & First Aid</h3>
+            <p>Quick actions, vet contact info & emergency steps when something feels wrong.</p>
+            <span class="feature-link">Open emergency kit →</span>
+          </a>
+
+          <!-- Suggestions -->
+          <a href="suggestion.html" class="feature-card reveal">
+            <div class="feature-icon">💬</div>
+            <h3>Suggestions & Feedback</h3>
+            <p>Share ideas, report issues or request new features to make Pet Companion better.</p>
+            <span class="feature-link">Send a suggestion →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FLOATING AI BUTTON -->
+  <button id="aiBtn" class="ai-fab" title="Ask AI about your pet">🤖</button>
+
+  <!-- AI CHAT WINDOW -->
+  <div id="aiChatWindow" class="ai-chat">
+    <div class="ai-chat__header">
+      <div>
+        <div class="ai-title">AI Pet Assistant</div>
+        <div class="ai-subtitle">Ask anything about food, training, behaviour & more.</div>
+      </div>
+      <button id="aiClose" class="ai-close" aria-label="Close chat">✖</button>
+    </div>
+
+    <div id="aiMessages" class="ai-chat__messages">
+      <!-- messages will appear here -->
+    </div>
+
+    <div class="ai-chat__input">
+      <input id="aiInput" type="text" placeholder="Ask something, e.g. “Best diet for 2 year old labrador?”" />
+      <button id="aiSend">➤</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Pet Companion</h4>
+        <p>Helping humans organise their pet’s health, happiness & daily routines.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Care</h5>
+        <a href="food_guide.html">Food guide</a>
+        <a href="grooming.html">Grooming</a>
+        <a href="weight_tracker.html">Weight tracker</a>
+        <a href="behaviour.html">Behaviour notes</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Account</h5>
+        <a href="pet_details.html">Your pets</a>
+        <a href="terms.html">Terms & policies</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Support</h5>
+        <a href="emergency.html">Emergency help</a>
+        <a href="suggestion.html">Send feedback</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Pet Companion · All rights reserved.
+    </div>
+  </footer>
+
+  <script type="module" src="firebase_setup.js"></script>
+  <script type="module" src="dashboard.js"></script>
+</body>
+
+</html>

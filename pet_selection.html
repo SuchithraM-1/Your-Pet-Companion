@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Your Pet</title>
+    <link rel="stylesheet" href="pet_selection.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="images/logo.jpg.png" class="logo" />
+
+        <h1 class="title">Which pet do you have?</h1>
+        <p class="subtitle">Select one or both 🐶🐱</p>
+
+        <div class="pet-options">
+            <label class="pet-box">
+                <input type="checkbox" id="dogCheck" />
+                <div class="box dog">🐶 Dog</div>
+            </label>
+
+            <label class="pet-box">
+                <input type="checkbox" id="catCheck" />
+                <div class="box cat">🐱 Cat</div>
+            </label>
+        </div>
+
+        <button id="continueBtn" class="btn">Continue</button>
+    </div>
+
+    <script type="module" src="pet_selection.js"></script>
+</body>
+</html>

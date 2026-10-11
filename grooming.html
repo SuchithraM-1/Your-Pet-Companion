@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grooming Tips – Pet Companion</title>
+    <link rel="stylesheet" href="grooming.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <button class="back-btn" onclick="history.back()">← Back</button>
+        <h2 class="header-title">Grooming Tips ✂️</h2>
+    </header>
+
+    <div class="page">
+
+        <!-- INTRO -->
+        <section class="section">
+            <h1>Keep Your Pet Clean & Healthy</h1>
+            <p>Good grooming prevents infections, maintains hygiene, and keeps your pet comfortable.</p>
+        </section>
+
+        <!-- BATHING -->
+        <section class="card">
+            <h2>Bathing</h2>
+            <ul>
+                <li>Dogs: Every 2–4 weeks depending on breed</li>
+                <li>Cats: Self-cleaning, bathe only if dirty</li>
+                <li>Use pet-safe shampoo only</li>
+                <li>Dry completely to avoid fungal issues</li>
+            </ul>
+        </section>
+
+        <!-- NAILS -->
+        <section class="card">
+            <h2>Nail Trimming</h2>
+            <ul>
+                <li>Trim every 3–4 weeks</li>
+                <li>Use pet-safe nail clippers</li>
+                <li>Avoid cutting the “quick"</li>
+            </ul>
+        </section>
+
+        <!-- EARS -->
+        <section class="card">
+            <h2>Ear Cleaning</h2>
+            <ul>
+                <li>Check weekly for wax, redness, or smell</li>
+                <li>Never use water inside ears</li>
+                <li>Use vet-approved ear solutions</li>
+            </ul>
+        </section>
+
+        <!-- HAIR -->
+        <section class="card">
+            <h2>Coat & Hair Care</h2>
+            <ul>
+                <li>Brush daily for shedding breeds</li>
+                <li>Long haired pets need trimming</li>
+                <li>Check for ticks & fleas regularly</li>
+            </ul>
+        </section>
+
+        <!-- SUGGESTION BOX -->
+        <section class="suggest-box">
+            <h2>Have a suggestion? 📝</h2>
+            <p class="suggest-sub">Help us improve Pet Companion by sharing your ideas.</p>
+
+            <textarea id="suggestInput" placeholder="Type your suggestion here..."></textarea>
+
+            <button class="suggest-btn" onclick="submitSuggestion('grooming')">Submit</button>
+
+            <p id="suggestMessage" class="suggest-message"></p>
+        </section>
+
+    </div>
+
+    <script type="module" src="suggestions.js"></script>
+</body>
+</html>

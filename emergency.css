@@ -1,0 +1,83 @@
+body {
+    font-family: Poppins, sans-serif;
+    background: #f8f9fc;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 780px;
+    margin: 25px auto;
+    padding-bottom: 80px;
+}
+
+.heading {
+    text-align: center;
+    color: #f49d49;
+    margin-bottom: 5px;
+}
+
+.sub {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* MAP */
+#mapContainer {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+
+#vetMap {
+    width: 100%;
+    height: 250px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    width: 100%;
+    background: #4f7cac;
+    padding: 12px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* EMERGENCY BLOCKS */
+.emergency-section .block {
+    background: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.08);
+}
+
+.block h4 {
+    color: #f49d49;
+    margin-bottom: 10px;
+}
+
+/* SOS BUTTON */
+#sosBtn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 70px;
+    height: 70px;
+    background: #ff3b3b;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+}

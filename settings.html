@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings – Pet Companion</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <nav class="top-nav">
+    <div class="top-left">
+      <button class="back-btn" onclick="window.location.href='dashboard.html'">← Back</button>
+      <h2 class="logo">Settings</h2>
+    </div>
+  </nav>
+
+  <!-- Settings Content -->
+  <section class="settings-container">
+
+    <!-- Profile Setting (Summary + Edit) -->
+    <div class="setting-card">
+      <div class="setting-row">
+        <div>
+          <h3>Profile</h3>
+          <p id="profileSummary" class="summary-text">Name: — , Email: —</p>
+        </div>
+        <button id="editProfileBtn" class="secondary-btn">Edit</button>
+      </div>
+
+      <div id="profileForm" class="setting-body" hidden>
+        <label for="userNameInput">Name</label>
+        <input id="userNameInput" type="text" placeholder="Your name">
+
+        <label for="userEmailInput">Email</label>
+        <input id="userEmailInput" type="email" placeholder="Your email">
+
+        <div class="btn-row">
+          <button id="saveProfileBtn">Save</button>
+          <button id="cancelProfileBtn" class="outline-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Password Setting -->
+    <div class="setting-card">
+      <div class="setting-row">
+        <div>
+          <h3>Password</h3>
+          <p class="summary-text">Change your account password</p>
+        </div>
+        <button id="showPassFormBtn" class="secondary-btn">Change</button>
+      </div>
+
+      <div id="passwordForm" class="setting-body" hidden>
+        <input id="passwordInput" type="password" placeholder="New password">
+
+        <div class="btn-row">
+          <button id="changePassBtn">Update Password</button>
+          <button id="cancelPassBtn" class="outline-btn">Cancel</button>
+        </div>
+        <p class="hint">Note: If update fails, you may need to login again.</p>
+      </div>
+    </div>
+
+    <!-- Language Setting -->
+    <div class="setting-card">
+      <div class="setting-row">
+        <div>
+          <h3>Language</h3>
+          <p id="languageSummary" class="summary-text">Current: English</p>
+        </div>
+        <button id="showLangFormBtn" class="secondary-btn">Change</button>
+      </div>
+
+      <div id="languageForm" class="setting-body" hidden>
+        <select id="languageSelect">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="kn">Kannada</option>
+        </select>
+
+        <div class="btn-row">
+          <button id="saveLangBtn">Save Language</button>
+          <button id="cancelLangBtn" class="outline-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Danger Zone -->
+    <div class="setting-card danger">
+      <h3>Danger Zone</h3>
+      <p class="summary-text">Delete your account permanently</p>
+      <button id="deleteAccountBtn" class="delete-btn">Delete My Account</button>
+      <p class="hint">This action cannot be undone.</p>
+    </div>
+
+  </section>
+
+  <script type="module" src="settings.js"></script>
+</body>
+</html>

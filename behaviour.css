@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: "Poppins";
+    background: #f6f6f6;
+}
+
+.header {
+    background: linear-gradient(90deg, #ff914d, #3e7cb1);
+    padding: 14px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.page {
+    padding: 20px;
+}
+
+.card {
+    padding: 18px;
+    background: white;
+    border-radius: 16px;
+    margin-top: 18px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+}
+
+.suggest-box {
+    background: white;
+    padding: 20px;
+    margin-top: 22px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+}
+
+#suggestInput {
+    width: 90%;
+    height: 120px;
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+.suggest-btn {
+    margin-top: 12px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #ff914d, #3e7cb1);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard | Pet Companion</title>
+  <link rel="stylesheet" href="admin_dashboard.css" />
+</head>
+<body>
+  <!-- Top Gradient Header (like your dashboard) -->
+  <header class="admin-header">
+    <div class="brand">
+      <img src="logo.jpg.png" alt="Pet Companion" class="logo" />
+      <div class="brand-text">
+        <span class="brand-name">Pet Companion</span>
+        <span class="admin-badge">Admin</span>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <button id="adminNotifBtn" class="icon-btn">🔔</button>
+      <button id="adminSettingsBtn" class="icon-btn">⚙️</button>
+
+      <div class="menu-wrapper">
+        <button id="adminMenuBtn" class="menu-btn">Menu ▾</button>
+        <div id="adminMenuDropdown" class="menu-dropdown">
+          <button data-section="users">Users</button>
+          <button data-section="pets">Pets</button>
+          <button data-section="announcements">Announcements</button>
+          <button data-section="suggestions">Suggestions</button>
+          <button data-section="breeds">Breed Manager</button>
+          <button data-section="emergency">Emergency Contacts</button>
+          <button data-section="export">Export</button>
+        </div>
+      </div>
+
+      <button id="adminLogoutBtn" class="logout-btn">Logout</button>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <h1 class="page-title">Admin Control Panel</h1>
+
+    <!-- TILE GRID (like your screenshot) -->
+    <section class="tile-grid">
+      <div class="tile" data-section="users">
+        <h3>Users</h3>
+        <p>View / Delete users</p>
+      </div>
+
+      <div class="tile" data-section="pets">
+        <h3>Pets</h3>
+        <p>View Dog + Cat details</p>
+      </div>
+
+      <div class="tile" data-section="announcements">
+        <h3>Announcements</h3>
+        <p>Add / Remove</p>
+      </div>
+
+      <div class="tile" data-section="suggestions">
+        <h3>Suggestions</h3>
+        <p>View user suggestions</p>
+      </div>
+
+      <div class="tile" data-section="breeds">
+        <h3>Breed Manager</h3>
+        <p>Add / Remove dog & cat breeds</p>
+      </div>
+
+      <div class="tile" data-section="emergency">
+        <h3>Emergency Contacts</h3>
+        <p>Add / Remove vet contacts</p>
+      </div>
+
+      <div class="tile" data-section="export">
+        <h3>Export</h3>
+        <p>Download CSV</p>
+      </div>
+    </section>
+
+    <!-- SECTIONS (shown/hidden) -->
+    <!-- USERS SECTION -->
+    <section id="section-users" class="admin-section hidden">
+      <div class="section-header">
+        <h2>Manage Users</h2>
+        <div class="section-actions">
+          <button id="refreshUsersBtn">Refresh</button>
+          <button id="exportUsersBtn" class="outline">Export Users CSV</button>
+        </div>
+      </div>
+      <div id="usersList" class="list-box">Loading...</div>
+    </section>
+
+    <!-- PETS SECTION -->
+    <section id="section-pets" class="admin-section hidden">
+      <div class="section-header">
+        <h2>Manage Pets</h2>
+        <div class="section-actions">
+          <button id="refreshPetsBtn">Refresh</button>
+          <button id="exportPetsBtn" class="outline">Export Pets CSV</button>
+        </div>
+      </div>
+      <div id="petsList" class="list-box">Loading...</div>
+    </section>
+
+    <!-- ANNOUNCEMENTS SECTION -->
+    <section id="section-announcements" class="admin-section hidden">
+      <div class="section-header">
+        <h2>Announcements</h2>
+      </div>
+      <textarea
+        id="announcementText"
+        placeholder="Write an announcement for all users..."
+      ></textarea>
+      <div class="section-actions">
+        <button id="postAnnouncementBtn">Post Announcement</button>
+      </div>
+      <h3 class="sub-title">Previous Announcements</h3>
+      <div id="annList" class="list-box">Loading...</div>
+    </section>
+
+    <!-- SUGGESTIONS SECTION -->
+    <section id="section-suggestions" class="admin-section hidden">
+      <div class="section-header">
+        <h2>User Suggestions</h2>
+        <button id="refreshSuggestionsBtn">Refresh</button>
+      </div>
+      <div id="suggestionList" class="list-box">Loading...</div>
+    </section>
+
+    <!-- BREEDS SECTION -->
+    <section id="section-breeds" class="admin-section hidden">
+      <div class="section-header">
+        <h2>Breed Manager</h2>
+      </div>
+      <div class="form-row">
+        <input
+          id="breedNameInput"
+          type="text"
+          placeholder="Breed name (e.g., Labrador Retriever)"
+        />
+        <select id="breedTypeSelect">
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+        </select>
+        <button id="addBreedBtn">Add Breed</button>
+      </div>
+      <div id="breedList" class="list-box">Loading...</div>
+    </section>
+
+    <!-- EMERGENCY CONTACTS SECTION -->
+    <section id="section-emergency" class="admin-section hidden">
+      <div class="section-header">
+        <h2>Emergency Contacts</h2>
+      </div>
+      <div class="form-row">
+        <input
+          id="emName"
+          type="text"
+          placeholder="Vet / Clinic name"
+        />
+        <input
+          id="emPhone"
+          type="text"
+          placeholder="Phone number"
+        />
+        <button id="addEmergencyBtn">Add</button>
+      </div>
+      <div id="emList" class="list-box">Loading...</div>
+    </section>
+
+    <!-- EXPORT SECTION -->
+    <section id="section-export" class="admin-section hidden">
+      <div class="section-header">
+        <h2>Export Data</h2>
+      </div>
+      <div class="export-buttons">
+        <button id="exportUsersBtn2">Export Users CSV</button>
+        <button id="exportPetsBtn2">Export Pets CSV</button>
+        <button id="exportSuggestionsBtn">Export Suggestions CSV</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="admin_dashboard.js"></script>
+</body>
+</html>

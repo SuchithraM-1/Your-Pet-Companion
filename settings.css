@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  background: #fafafa;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Top nav */
+.top-nav {
+  background: #ff9933;
+  padding: 12px 16px;
+  color: #fff;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.back-btn {
+  border: none;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logo {
+  margin: 0;
+}
+
+/* Settings container */
+.settings-container {
+  width: 90%;
+  max-width: 520px;
+  margin: 20px auto 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.setting-card {
+  background: #fff;
+  padding: 16px 14px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.06);
+}
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.setting-card h3 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+}
+
+.summary-text {
+  margin: 0;
+  font-size: 13px;
+  color: #555;
+}
+
+/* Hidden body (form) */
+.setting-body {
+  margin-top: 12px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.setting-card label {
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.setting-card input,
+.setting-card select {
+  width: 100%;
+  padding: 9px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Buttons */
+.setting-card button {
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.secondary-btn {
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid rgba(255,153,51,0.6);
+  color: #ff9933;
+}
+
+.secondary-btn:hover {
+  background: rgba(255,153,51,0.08);
+}
+
+.btn-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.btn-row button {
+  flex: 1;
+  padding: 9px;
+  border-radius: 8px;
+}
+
+.btn-row #saveProfileBtn,
+.btn-row #changePassBtn,
+#saveLangBtn {
+  background: #ff9933;
+  color: #fff;
+}
+
+.outline-btn {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+/* Danger zone */
+.danger {
+  border-left: 4px solid #ff4444;
+}
+
+.delete-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 8px;
+  background: #ff4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #d63030;
+}
+
+.hint {
+  font-size: 11px;
+  color: #777;
+  margin-top: 6px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .setting-card {
+    padding: 14px 10px;
+  }
+
+  .setting-row h3 {
+    font-size: 16px;
+  }
+}

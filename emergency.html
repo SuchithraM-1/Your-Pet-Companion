@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Care – Pet Companion</title>
+    <link rel="stylesheet" href="emergency.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2 class="heading">Emergency Help For Your Pet</h2>
+        <p class="sub">Quick actions can save your pet’s life. Stay calm and follow these steps.</p>
+
+        <!-- Google Maps Auto Location -->
+        <div id="mapContainer">
+            <h3>Nearby Veterinary Clinics</h3>
+            <iframe id="vetMap" loading="lazy" allowfullscreen></iframe>
+
+            <button id="openMaps" class="btn-primary">
+                🔍 Find Veterinary Clinics Near Me
+            </button>
+        </div>
+
+        <!-- Emergency Steps -->
+        <div class="emergency-section">
+            <h3>What To Do During Emergencies</h3>
+
+            <div class="block">
+                <h4>🐾 1. Bleeding / Injury</h4>
+                <ul>
+                    <li>Apply gentle pressure with a clean cloth.</li>
+                    <li>If blood soaks through, don’t remove — add more layers.</li>
+                    <li>Keep pet calm and restrict movement.</li>
+                    <li>Visit a vet immediately.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h4>🧪 2. Poisoning</h4>
+                <ul>
+                    <li>Check what your pet consumed.</li>
+                    <li>Do NOT make them vomit unless vet says so.</li>
+                    <li>Bring the sample to the vet.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h4>🥵 3. Heatstroke</h4>
+                <ul>
+                    <li>Move pet to shaded or cool area immediately.</li>
+                    <li>Apply cool (not ice) water on body.</li>
+                    <li>Offer small amounts of water.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h4>😿 4. Breathing Problems</h4>
+                <ul>
+                    <li>Clear mouth of any blockage.</li>
+                    <li>Keep neck straight.</li>
+                    <li>Avoid touching chest too much.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h4>🐍 5. Snake Bite</h4>
+                <ul>
+                    <li>Keep pet still — movement spreads venom faster.</li>
+                    <li>Do NOT try sucking venom.</li>
+                    <li>Take to vet ASAP (golden hour = first 30 minutes).</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h4>⚡ 6. Seizures</h4>
+                <ul>
+                    <li>Clear area around pet.</li>
+                    <li>Do NOT hold the pet during seizure.</li>
+                    <li>Record time duration.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating SOS Button -->
+    <button id="sosBtn">SOS</button>
+
+    <script src="emergency.js"></script>
+</body>
+
+</html>

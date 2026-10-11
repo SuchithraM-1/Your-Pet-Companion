@@ -1,0 +1,36 @@
+{
+  "brand": "Pet Companion",
+  "nav_notifications": "Notifications",
+  "nav_settings": "Settings",
+  "nav_pets": "Pets",
+  "nav_logout": "Logout",
+
+  "hero_title": "Smart Pet Care,",
+  "hero_title2": "Made Easy",
+  "hero_sub": "Manage your pet’s food, grooming, training, vaccinations & behaviour.",
+
+  "your_pet": "Your Pet",
+  "loading": "Loading…",
+
+  "features_title": "Care Features",
+
+  "food_guide": "Food Guide",
+  "food_guide_desc": "Best diet and nutrition recommendations.",
+
+  "grooming": "Grooming",
+  "grooming_desc": "Complete grooming instructions.",
+
+  "behaviour": "Behaviour Notes",
+  "behaviour_desc": "Track moods & patterns.",
+
+  "weight_tracker": "Weight Tracker",
+  "weight_tracker_desc": "Monitor growth & health.",
+
+  "emergency": "Emergency Care",
+  "emergency_desc": "First-aid & danger warnings.",
+
+  "suggestions": "Suggestions",
+  "suggestions_desc": "Send your ideas & improvements.",
+
+  "footer": "© 2025 Pet Companion — All Rights Reserved."
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vaccination Tracker</title>
+    <link rel="stylesheet" href="vaccination.css">
+</head>
+<body>
+
+<nav class="top-nav">
+    <h2>Vaccination Tracker</h2>
+</nav>
+
+<div class="container">
+
+    <!-- ADD NEW RECORD -->
+    <div class="card">
+        <h3>Add Vaccination Record</h3>
+
+        <label>Vaccine Name</label>
+        <select id="vaccineSelect">
+            <option value="">-- Select Vaccine --</option>
+            <option value="Anti-Rabies">Anti-Rabies</option>
+            <option value="DHPPi">DHPPi</option>
+            <option value="Corona Vaccine">Corona Vaccine</option>
+            <option value="Leptospirosis">Leptospirosis</option>
+            <option value="FVRCP (Cat)">FVRCP (Cat)</option>
+            <option value="Rabies (Cat)">Rabies (Cat)</option>
+        </select>
+
+        <label>Vaccination Date</label>
+        <input type="date" id="vaccineDate">
+
+        <label>Upload Proof (Image/PDF)</label>
+        <input type="file" id="proof">
+
+        <button id="saveVaccineBtn">Save Record</button>
+    </div>
+
+
+    <!-- VACCINATION HISTORY -->
+    <div class="card">
+        <h3>Vaccination History</h3>
+        <div id="vaccineHistory">
+            <p>Loading...</p>
+        </div>
+    </div>
+
+</div>
+
+<script type="module" src="vaccination.js"></script>
+</body>
+</html>

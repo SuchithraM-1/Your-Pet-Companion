@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Companion – Login</title>
+
+    <link rel="stylesheet" href="login_page.css" />
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="bg"></div>
+    <div class="overlay"></div>
+
+    <!-- Header / Logo -->
+    <div class="brand">
+        <img src="images/logo.jpg.png" class="brand__logo" alt="logo" />
+        <div class="brand__name">
+            <h1>Pet Companion</h1>
+        </div>
+    </div>
+
+    <!-- Auth Container -->
+    <div class="auth">
+        <div class="card">
+
+            <div class="card__welcome">
+                <span class="mascot">🐾</span>
+                <h3>Welcome Back!</h3>
+            </div>
+
+            <!-- LOGIN FORM -->
+            <form id="loginForm" class="form active">
+
+                <div class="field">
+                    <label>Email</label>
+                    <input id="loginEmail" type="email" placeholder="Enter your email" required />
+                </div>
+
+                <div class="field password-field">
+                    <label>Password</label>
+                    <input id="loginPassword" type="password" placeholder="Enter your password" required />
+                    <button type="button" class="show-pass" id="toggleLoginPass">👁️</button>
+                </div>
+
+                <div class="row">
+                    <div class="check">
+                        <input type="checkbox" id="rememberMe" />
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+
+                    <button type="button" id="forgotBtn" class="link">Forgot Password?</button>
+                </div>
+
+                <button class="btn full primary" type="submit">
+                    Login
+                </button>
+
+                <p class="switch-msg">
+                    Don't have an account? 
+                    <button id="showSignup" class="link">Sign Up</button>
+                </p>
+            </form>
+
+            <!-- SIGNUP FORM -->
+            <form id="signupForm" class="form">
+
+                <div class="field">
+                    <label>Full Name</label>
+                    <input id="displayName" type="text" placeholder="Enter your name" required />
+                </div>
+
+                <div class="field">
+                    <label>Email</label>
+                    <input id="signupEmail" type="email" placeholder="Enter your email" required />
+                </div>
+
+                <div class="field password-field">
+                    <label>Password</label>
+                    <input id="signupPassword" type="password" placeholder="Create password" required />
+                    <button type="button" class="show-pass" id="toggleSignupPass">👁️</button>
+                </div>
+
+                <div class="field password-field">
+                    <label>Confirm Password</label>
+                    <input id="confirmPassword" type="password" placeholder="Confirm password" required />
+                    <button type="button" class="show-pass" id="toggleConfirmPass">👁️</button>
+                </div>
+
+                <button class="btn full primary" type="submit">
+                    Sign Up
+                </button>
+
+                <p class="switch-msg">
+                    Already have an account?
+                    <button id="showLogin" class="link">Login</button>
+                </p>
+            </form>
+
+            <!-- OR -->
+            <div class="or">OR</div>
+
+            <!-- GOOGLE LOGIN -->
+            <button class="btn outline full" id="googleBtn">
+                <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="btn__icon" />
+                Continue with Google
+            </button>
+
+        </div>
+    </div>
+
+    <script type="module" src="firebase_setup.js"></script>
+    <script type="module" src="login_page.js"></script>
+
+    <!-- Password Show/Hide JS -->
+    <script>
+        const toggleLoginPass = document.getElementById("toggleLoginPass");
+        const toggleSignupPass = document.getElementById("toggleSignupPass");
+        const toggleConfirmPass = document.getElementById("toggleConfirmPass");
+
+        function toggleVisibility(inputId) {
+            const field = document.getElementById(inputId);
+            field.type = field.type === "password" ? "text" : "password";
+        }
+
+        toggleLoginPass.onclick = () => toggleVisibility("loginPassword");
+        toggleSignupPass.onclick = () => toggleVisibility("signupPassword");
+        toggleConfirmPass.onclick = () => toggleVisibility("confirmPassword");
+    </script>
+
+</body>
+</html>

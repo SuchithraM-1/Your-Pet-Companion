@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Pet Details</title>
+    <link rel="stylesheet" href="pet_details.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <h2 class="title">Manage Pet Details</h2>
+    <p class="subtitle">Tell us about your furry family so we can personalize your dashboard.</p>
+
+    <div class="card">
+        <form id="petForm">
+
+            <!-- DOG SECTION -->
+            <h3 class="section-title">🐶 Dog Details</h3>
+
+            <label>Name</label>
+            <input type="text" id="dogName" placeholder="Dog Name">
+
+            <label>Breed</label>
+            <select id="dogBreed">
+                <option>Indian Pariah Dog</option>
+                <option>Labrador</option>
+                <option>German Shepherd</option>
+                <option>Golden Retriever</option>
+            </select>
+
+            <label>Age (years)</label>
+            <input type="number" id="dogAge">
+
+            <label>Weight (kg)</label>
+            <input type="number" id="dogWeight">
+
+            <label>Colour</label>
+            <input type="text" id="dogColor">
+
+
+            <!-- CAT SECTION -->
+            <h3 class="section-title">🐱 Cat Details</h3>
+
+            <label>Name</label>
+            <input type="text" id="catName" placeholder="Cat Name">
+
+            <label>Breed</label>
+            <select id="catBreed">
+                <option>Indian Domestic Cat</option>
+                <option>Persian Cat</option>
+                <option>Siamese</option>
+            </select>
+
+            <label>Age (years)</label>
+            <input type="number" id="catAge">
+
+            <label>Weight (kg)</label>
+            <input type="number" id="catWeight">
+
+            <label>Colour</label>
+            <input type="text" id="catColor">
+
+            <button type="button" id="saveContinueBtn" class="save-btn">Save & Continue</button>
+        </form>
+    </div>
+</div>
+
+<script type="module" src="pet_details.js"></script>
+</body>
+</html>

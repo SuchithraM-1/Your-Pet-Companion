@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom right, #ff9800, #0056b3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.title {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.pet-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.pet-box input {
+    display: none;
+}
+
+.box {
+    width: 120px;
+    padding: 18px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    user-select: none;
+    font-size: 18px;
+}
+
+.box.dog {
+    background: #ff9800;
+}
+
+.box.cat {
+    background: #0056b3;
+}
+
+.pet-box input:checked + .box {
+    transform: scale(1.08);
+    box-shadow: 0 0 12px rgba(0,0,0,0.25);
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #333;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+}

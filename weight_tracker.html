@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weight Tracker — Pet Companion</title>
+    <link rel="stylesheet" href="weight_tracker.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="title">⚖️ Weight Tracker</h1>
+        <p class="subtitle">Track your pet’s growth and health progress.</p>
+
+        <!-- Weight Input -->
+        <div class="input-box">
+            <label>Enter Pet Weight (kg):</label>
+            <input type="number" id="weightInput" placeholder="Example: 12.5" />
+            <button id="addWeightBtn" class="save-btn">Add Entry</button>
+        </div>
+
+        <!-- Chart -->
+        <div class="chart-section">
+            <canvas id="weightChart"></canvas>
+        </div>
+
+        <a href="dashboard.html" class="back-btn">⬅ Back to Dashboard</a>
+
+    </div>
+
+    <script type="module" src="firebase_setup.js"></script>
+    <script type="module" src="weight_tracker.js"></script>
+
+</body>
+
+</html>
